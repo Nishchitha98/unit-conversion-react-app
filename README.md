@@ -8,6 +8,9 @@ A modern, high-fidelity, glassmorphic dark-theme dashboard for real-time unit co
 
 ---
 
+## Live Demo
+https://nishchitha98.github.io/unit-conversion-react-app/
+
 ## Key Features
 
 - **Live Two-Way Conversion**: Type in either field (e.g. Celsius or Fahrenheit) to instantly see the calculated conversion in the opposite field.
