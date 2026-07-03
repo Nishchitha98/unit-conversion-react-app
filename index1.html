@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleek Unit Converter</title>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style1.css">
+    <!-- Conversion Logic -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Background grid/glow effects -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <section id="home">
+        <div class="nav-container">
+            <header>
+                <b>Unit Conversions</b>
+                <span class="sub-logo">Quick & Precise</span>
+            </header>
+            <nav>
+                <a href="#temperature" class="nav-link"><button class="topmenu">Temperature</button></a>
+                <a href="#weight" class="nav-link"><button class="topmenu">Weight</button></a>
+                <a href="#distance" class="nav-link"><button class="topmenu">Distance</button></a>
+            </nav>
+        </div>
+    </section>
+
+    <div id="all-conversions">
+        <!-- Temperature Card -->
+        <section id="temperature" class="card-section temp-card">
+            <div class="card-content">
+                <figure class="card-illustration">
+                    <div class="img-wrapper">
+                        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/thermo.png" alt="Thermometer image">
+                    </div>
+                    <figcaption>Celsius to Fahrenheit</figcaption>
+                </figure>
+                <article class="card-form">
+                    <fieldset>
+                        <legend>Temperature</legend>
+                        
+                        <div class="input-group">
+                            <label for="celsius">Celsius (°C)</label>
+                            <input type="number" id="celsius" placeholder="Enter Celsius value">
+                        </div>
+
+                        <div class="action-row">
+                            <button id="temp-convert-btn" class="convert-btn">Convert</button>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="fahrenheit">Fahrenheit (°F)</label>
+                            <input type="number" id="fahrenheit" placeholder="Enter Fahrenheit value">
+                        </div>
+                    </fieldset>
+                </article>
+                <aside class="formula-box">
+                    <div class="formula-icon">ℹ</div>
+                    <p><b>Formula:</b> (C × 9/5) + 32 = F</p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Weight Card -->
+        <section id="weight" class="card-section weight-card">
+            <div class="card-content">
+                <figure class="card-illustration">
+                    <div class="img-wrapper">
+                        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/weight.png" alt="Weight scale image">
+                    </div>
+                    <figcaption>Kilograms to Pounds</figcaption>
+                </figure>
+                <article class="card-form">
+                    <fieldset>
+                        <legend>Weight</legend>
+                        
+                        <div class="input-group">
+                            <label for="kilograms">Kilograms (kg)</label>
+                            <input type="number" id="kilograms" placeholder="Enter Kilograms">
+                        </div>
+
+                        <div class="action-row">
+                            <button id="weight-convert-btn" class="convert-btn">Convert</button>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="pounds">Pounds (lbs)</label>
+                            <input type="number" id="pounds" placeholder="Enter Pounds">
+                        </div>
+                    </fieldset>
+                </article>
+                <aside class="formula-box">
+                    <div class="formula-icon">ℹ</div>
+                    <p><b>Formula:</b> kg × 2.2046 = lbs</p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Distance Card -->
+        <section id="distance" class="card-section distance-card">
+            <div class="card-content">
+                <figure class="card-illustration">
+                    <div class="img-wrapper">
+                        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/speedo.png" alt="Speedometer image">
+                    </div>
+                    <figcaption>Kilometers to Miles</figcaption>
+                </figure>
+                <article class="card-form">
+                    <fieldset>
+                        <legend>Distance</legend>
+                        
+                        <div class="input-group">
+                            <label for="kilometers">Kilometers (km)</label>
+                            <input type="number" id="kilometers" placeholder="Enter Kilometers">
+                        </div>
+
+                        <div class="action-row">
+                            <button id="distance-convert-btn" class="convert-btn">Convert</button>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="miles">Miles (mi)</label>
+                            <input type="number" id="miles" placeholder="Enter Miles">
+                        </div>
+                    </fieldset>
+                </article>
+                <aside class="formula-box">
+                    <div class="formula-icon">ℹ</div>
+                    <p><b>Formula:</b> km × 0.6214 = mi</p>
+                </aside>
+            </div>
+        </section>
+    </div>
+
+    <!-- Scroll to Top floating button -->
+    <div id="go-home" class="iconbutton">
+        <a href="#home" aria-label="Go to Top">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+    </div>
+
+    <footer>
+        <p>Learn more about HTML/CSS/JS as a part of the IBM Fullstack Cloud Developer Certification</p>
+    </footer>
+</body>
+</html>
